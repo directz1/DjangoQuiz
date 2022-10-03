@@ -1,0 +1,25 @@
+{% extends 'Quiz/dependencies.html' %}
+ 
+{% block content %}
+ 
+<div class="container ">
+        
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+        <div class="card" align="centre " style="width: 50rem; border:3px black solid">
+            <img class="card-img-top" src="https://img.hankyung.com/photo/202201/0Q.28635141.1.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">종합점수: {{score}}/100점</h5>
+ 
+                <p class="card-text">Percentage: {{percent}}%</p>
+                <p class="card-text">소요시간: {{time}} 초</p>
+                <p class="card-text">정답개수: {{correct}}</p>
+                <p class="card-text">오답개수: {{wrong}}</p>
+                <p class="card-text">총문항수: {{total}}</p>
+                <h5>중대재해처벌법 꼭 숙지합시다!</h5>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+ 
+{% endblock %}
