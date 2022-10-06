@@ -9,9 +9,9 @@
  <form method='post' action=''>
     {% csrf_token %}
     {% for q  in questions%}
-    
+    <br>
     <div class="form-group">
-      <li><label for="question">{{q.question}}</label></li>
+    <label for="question">{{q.question}}</label>
     </div>
     <div class="form-check">
         <div class="form-check">
