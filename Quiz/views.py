@@ -12,23 +12,25 @@ def home(request):
         score=0
         wrong=0
         correct=0
-        total=0
-        a=len(questions)
+        total=len(questions)
+        print(total)
         for q in questions:
-            total+=1
             print(request.POST.get(q.question))
             print(q.ans)
             print()
-            if q.ans ==  request.POST.get(q.question):
-                #score+=10
-                correct+=1
-            else:
-                wrong+=1
-        score = round(100/(total)*correct)
+            if "option1" ==  request.POST.get(q.question):
+                score+= 100/total
+            elif "option2" == request.POST.get(q.question):
+                score+=50/total
+            elif "option3" == request.POST.get(q.question):
+                score+=0
+            
+
+        scorex = round(score)
         percent = correct/(total) *100
-        print(a)
         context = {
             'score':score,
+            'scorex':scorex,
             'time': request.POST.get('timer'),
             'correct':correct,
             'wrong':wrong,
