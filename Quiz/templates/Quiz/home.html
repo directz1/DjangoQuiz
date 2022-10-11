@@ -5,6 +5,7 @@
 <div class="container ">
 <p><h1>중대재해처벌법 Check List</h1></p><hr color="black" size="10">
 <div align="right " id="displaytimer"><b>Timer: 0 seconds</b></div>
+<img src="images/200x200.png" alt="My Image">
  <ol>
  <form method='post' action=''>
     {% csrf_token %}
@@ -17,19 +18,19 @@
         <div class="form-check">
             <input class="form-check-input" type="radio" name="{{q.question}}" id="gridRadios1" value="option1" checked>
             <label class="form-check-label" for="gridRadios1">
-            ○
+            양호
             </label>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="{{q.question}}" id="gridRadios2" value="option2">
             <label class="form-check-label" for="gridRadios2">
-            △
+            보통
             </label>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="{{q.question}}" id="gridRadios1" value="option3">
             <label class="form-check-label" for="gridRadios1">
-            &nbspX
+            미흡
             </label>
         </div>
         
