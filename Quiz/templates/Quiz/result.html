@@ -3,19 +3,23 @@
 {% block content %}
  
 <div class="container ">
-        
-    <div class="card-columns" style="padding: 10px; margin: 20px;">
-        <div class="card" align="centre " style="width: 50rem; border:3px black solid">
+    <div class="row">
+    <div class="col-6">
+    <div class="card-columns" style="border-radius: 15px;background:#F1F1F3; padding: 15px; margin: 20px;">
+        <div class="card" align="centre " style="width: 30rem; border:0px rgba(0, 0, 0, 0.856) none">
             <img class="card-img-top" src="https://img.hankyung.com/photo/202201/0Q.28635141.1.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">종합점수: {{scorex}}/100점</h5>
-                <p class="card-text">소요시간: {{time}} 초</p>
-                <p class="card-text">총문항수: {{total}}</p>
+                
+                <h2 class="card-title" align="centre" style="background: linear-gradient(to right, #ffa7a3, #5673bd); padding: 0.4em 2em; font-size: 30px;  border-radius: 1px; color: #ffffff;">종합점수: {{scorex}}/100점</h2>
+                <p class="card-text" style="border-bottom: 12px solid #dcf1fb; padding: 0 0 0 0.2em;">총문항수: {{total}}</p>
+                <p class="card-text" style="border-bottom: 12px solid #dcf1fb; padding: 0 0 0 0.2em;">소요시간: {{time}} 초</p>
                 <h5>중대재해처벌법 꼭 숙지합시다!</h5>
+            </div>
             </div>
         </div>
     </div>
- 
+    </div>
+    </div>
 </div>
  
 {% endblock %}
