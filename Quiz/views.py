@@ -7,25 +7,29 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request):
     if request.method == 'POST':
-        print(request.POST)
         questions=QuesModel.objects.all()
         score=0
         wrong=0
         correct=0
+        i=0
+        a=""
+        b=""
+        c=""
         total=len(questions)
-        print(total)
         for q in questions:
+            i += 1
             print(request.POST.get(q.question))
             print(q.ans)
             print()
             if "option1" ==  request.POST.get(q.question):
                 score+= 100/total
+                a+=str(i)+","
             elif "option2" == request.POST.get(q.question):
                 score+=50/total
+                b+=str(i)+","
             elif "option3" == request.POST.get(q.question):
                 score+=0
-            
-
+                c+=str(i)+","
         scorex = round(score)
         percent = correct/(total) *100
         context = {
@@ -35,7 +39,10 @@ def home(request):
             'correct':correct,
             'wrong':wrong,
             'percent':percent,
-            'total':total
+            'total':total,
+            'a':a,
+            'b':b,
+            'c':c,
         }
         return render(request,'Quiz/result.html',context)
     else:
