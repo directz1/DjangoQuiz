@@ -6,7 +6,7 @@
 <p><h1>중대재해처벌법 Check List</h1></p><hr color="black" size="10">
 <div align="right " id="displaytimer"><b>Timer: 0 seconds</b></div>
 <img src="/static/image/safe.jpg" style="width:100%; height: auto;" alt="My Image">
- <ol>
+
  <form method='post' action=''>
     {% csrf_token %}
     {% for q  in questions%}
@@ -57,6 +57,5 @@
             },1000)
         </script>
     {% endblock script %}
-</ol>
 </div>
 {% endblock %}

@@ -23,13 +23,13 @@ def home(request):
             print()
             if "option1" ==  request.POST.get(q.question):
                 score+= 100/total
-                a+=str(i)+","
+
             elif "option2" == request.POST.get(q.question):
                 score+=50/total
-                b+=str(i)+","
+                b+=q.op4+" "
             elif "option3" == request.POST.get(q.question):
                 score+=0
-                c+=str(i)+","
+                c+=q.op4+" "
         scorex = round(score)
         percent = correct/(total) *100
         context = {
